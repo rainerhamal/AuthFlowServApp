@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+{% block title %}Login{% endblock  %}
+
+{% block login/signup %}
+    <a class="nav-link" href="/sign_up">Create an account</a>
+{% endblock  %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container-sm">
+    <form method="post"> 
+    <h1>Log in to MBT</h1>
+    <p><span>Don't have an account? </span><a href="/sign_up">Create an account</a></p>
+    {% csrf_token %}{{form|crispy}}
+    <button type="submit" class="btn btn-success">Continue <i class="bi bi-arrow-right"></i></button>
+      
+    </form>
+</div>
+{% endblock  %}
