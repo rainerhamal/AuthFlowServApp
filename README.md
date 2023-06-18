@@ -30,6 +30,7 @@ Ensure that MySQL Workbench is installed and running on your local machine.
 Create a new MySQL database for the project.
 
 <h3>5</h3>Update the database configuration in the AuthFlowServApp/settings.py file:
+<div>
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -40,7 +41,7 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-
+</div>
 
 <h3>6</h3>Apply the database migrations:
 
