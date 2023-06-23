@@ -15,9 +15,8 @@
 
     <div class="col mt-5">
         <div class="card" style="width: 500px;">
-            <form method="post"> 
-                <h1>Create an MBT account</h1>
-                <p><span>Already have an MBT account? </span><a href="/login">Log in</a></p>
+            <form method="GET"> 
+                <h1>Update User account</h1>
                 {% csrf_token %}{{form|crispy}}
                 <button type="submit" class="btn btn-success">Continue <i class="bi bi-arrow-right"></i></button>
               

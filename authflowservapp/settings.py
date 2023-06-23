@@ -86,9 +86,9 @@ WSGI_APPLICATION = 'authflowservapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mydatabase',
-        'USER': 'myuser',
-        'PASSWORD': 'mypassword',
+        'NAME': 'authflowservapp',
+        'USER': 'root',
+        'PASSWORD': 'Yukitoyue0829*',
         'HOST': 'localhost',
         'PORT': '3306'
 
