@@ -6,20 +6,87 @@
   <li>Python 3.11</li>
   <li>pipenv (for managing virtual environments and dependencies</li>
   <li>Django web framework</li>
-  <li>crispy-bootstrap5 (to enhance the appearacance of Djnago Forms)</li>
+  <li>crispy-bootstrap5 (to enhance the appearacance of Django Forms)</li>
   <li>MySQL Workbench as local database</li>
  </ul>
 
  <h1>Installation:</h1>
  <h3>1</h3>Clone the repository using the following command:
- 
-git clone https://github.com/rainerhamal/AuthFlowServApp.git
 
-<h3>2</h3>Create a virtual environment and activate it:
-pip install pipenv
-cd AuthFlowServApp
-pipenv install --python 3.11
+ ```
+git clone https://github.com/rainerhamal/AuthFlowServApp.git
+```
+
+
+<h3>2</h3>
+<ol>
+ <li>Download the latest version of Python https://www.python.org/downloads/</li>
+ <li>Open your cmd terminal</li>
+ <li>
+  run this code in your terminal
+
+  ```
+  pip install pipenv
+  ```
+ </li>
+ 
+ <li>
+  Create a folder location for your Django project, in this case authflowservapp.
+
+  ```
+mkdir authflowservapp
+```
+
+  Change directory to your project folder
+  
+  ```
+  cd AuthFlowServApp
+  ```
+
+ </li>
+ <li>
+  run the following 
+
+  ```
+  pipenv install django
+  ```
+ </li>
+ 
+ <li>
+  Open the folder in your VSCode or whatever IDE you have. To create your Django project, run the following
+
+  ```
+  django-admin startproject authflowservapp .
+```
+
+make sure there's a dot at the end of the command so it doesn't create redundant folders for the project.
+ </li>
+ <li>
+  Create a virtual environment and activate it:
+
+```
 pipenv shell
+```
+
+</li>
+<li>
+ Create your first app
+
+ ```
+python manage.py startapp main
+```
+</li>
+
+<li>
+ run the app
+
+ ```
+python manage.py runserver 9000(or you can leave this blank or nominate a different port)
+```
+
+</li>
+</ol>
+
 
 <h3>3</h3>Install the project dependencies:
 
