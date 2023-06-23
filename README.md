@@ -103,7 +103,7 @@ authflowservapp/
 <h3>I</h3>
 <p>In the authflowservapp/urls.py file, you need to configure the URL patterns for your application. Add the following code to the urlpatterns list:</p>
 
-```
+```django
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
@@ -116,7 +116,7 @@ urlpatterns = [
 <h3>II</h3>
 <p>In the main/urls.py file, add the following code to the urlpatterns list:</p>
 
-```
+```django
 urlpatterns = [
     path('', views.home, name='home'),
     path('home', views.home, name='home'), #get request to retrieve and display user information 
