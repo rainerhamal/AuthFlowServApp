@@ -31,7 +31,6 @@ Create a new MySQL database for the project.
 
 <h3>5</h3>Update the database configuration in the AuthFlowServApp/settings.py file:
 ```django
-
 <div>
 DATABASES = {
     'default': {
@@ -44,7 +43,6 @@ DATABASES = {
     }
 }
 </div>
-
 ```
 <h3>6</h3>Apply the database migrations:
 
@@ -58,6 +56,7 @@ python manage.py runserver 9000(or any available ports in your machine)
 <h3>8</h3>Access the application at http://localhost:9000.
 
 <h1>Project Structure:</h1>
+
 ```django
 
 authflowservapp/
@@ -73,7 +72,6 @@ authflowservapp/
 │       └── user_update.html
 ├── manage.py
 └── README.md
-
 ```
 <ul>
  <li>The main project directory is named my_project.</li>
