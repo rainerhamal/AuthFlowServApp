@@ -75,9 +75,9 @@ authflowservapp/
 └── README.md
 ```
 <ul>
- <li>The main project directory is named my_project.</li>
- <li>The main application within the project is named main_project.</li>
- <li>The project includes two folders within the main_project application: templates and register.</li>
+ <li>The main project directory is named authflowservapp.</li>
+ <li>The main application within the project is named main.</li>
+ <li>The project includes two folders within the main application: templates and registration.</li>
  <li>
   The templates folder contains the following files in a subfolder named main:
  <ul>
@@ -87,7 +87,7 @@ authflowservapp/
  </ul>
  </li>
  <li>
-  The register folder contains the following files:
+  The registration folder contains the following files:
   <ul>
   <li>login.html</li>
   <li>sign_up.html</li>
@@ -124,6 +124,70 @@ urlpatterns = [
     path('<int:id>/', views.user_update, name='user_update'), #get and post request for update operation
 ]
 ```
+
+<h1>Test Instructions</h1>
+<p>To test the /api/signup and /api/login endpoints in the Django project, follow these instructions:</p>
+<ol>
+ <li>Make sure you have set up the project environment and dependencies as mentioned in the project's README file.</li>
+ <li>Open the Django project in your preferred code editor.</li>
+ <li>Navigate to the file containing the tests, which is usually located at my_project/main_project/tests.py.</li>
+ <li>Copy the following test code into the 'main/tests.py' file:</li>
+</ol>
+
+```django
+from django.test import TestCase
+from rest_framework.test import APIClient
+from django.contrib.auth.models import User
+
+class SignupAPITests(TestCase):
+
+    def test_signup_with_valid_data(self):
+        client = APIClient()
+        data = {
+            "username": "test_user",
+            "email": "test_user@example.com",
+            "password": "password123",
+        }
+        response = client.post("/api/signup", data=data)
+        self.assertEqual(response.status_code, 201)
+        self.assertTrue(response.data["username"] == "test_user")
+
+    def test_signup_with_invalid_data(self):
+        client = APIClient()
+        data = {
+            "username": "",
+            "email": "test_user@example.com",
+            "password": "password123",
+        }
+        response = client.post("/api/signup", data=data)
+        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.data["username"], ["This field is required."])
+
+
+class LoginAPITests(TestCase):
+
+    def setUp(self):
+        user = User.objects.create_user(
+            username="test_user", email="test_user@example.com", password="password123"
+        )
+
+    def test_login_with_valid_credentials(self):
+        client = APIClient()
+        data = {
+            "username": "test_user",
+            "password": "password123",
+        }
+        response = client.post("/api/login", data=data)
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(response.data["token"])
+
+    def test_login_with_invalid_credentials(self):
+        client = APIClient()
+        data = {
+            "username": "test_user",
+            "password": "wrong_password",
+```
+
 
 <h1>API Endpoints</h1>
 <ul>
