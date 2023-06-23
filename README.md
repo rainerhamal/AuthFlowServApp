@@ -55,7 +55,7 @@ python manage.py runserver 9000(or any available ports in your machine)
 <h3>8</h3>Access the application at http://localhost:9000.
 
 <h1>Project Structure:</h1>
-authflowservapp/
+```authflowservapp/
 ├── main/
 │   ├── templates/
 │   │   └── main/
@@ -67,7 +67,7 @@ authflowservapp/
 │       ├── sign_up.html
 │       └── user_update.html
 ├── manage.py
-└── README.md
+└── README.md```
 <ul>
  <li>The main project directory is named my_project.</li>
  <li>The main application within the project is named main_project.</li>
