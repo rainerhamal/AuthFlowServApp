@@ -30,6 +30,7 @@ Ensure that MySQL Workbench is installed and running on your local machine.
 Create a new MySQL database for the project.
 
 <h3>5</h3>Update the database configuration in the AuthFlowServApp/settings.py file:
+
 ```django
 <div>
 DATABASES = {
