@@ -10,7 +10,7 @@
   <li>MySQL Workbench as local database</li>
  </ul>
 
- <h1>Installation</h1>
+ <h1>Installation:</h1>
  <h3>1</h3>Clone the repository using the following command:
  
 git clone https://github.com/rainerhamal/AuthFlowServApp.git
@@ -53,6 +53,47 @@ python manage.py migrate
 python manage.py runserver 9000(or any available ports in your machine)
 
 <h3>8</h3>Access the application at http://localhost:9000.
+
+<h1>Project Structure:</h1>
+authflowservapp/
+├── main/
+│   ├── templates/
+│   │   └── main/
+│   │       ├── base.html
+│   │       ├── home.html
+│   │       └── nav.html
+│   └── registration/
+│       ├── login.html
+│       ├── sign_up.html
+│       └── user_update.html
+├── manage.py
+└── README.md
+<ul>
+ <li>The main project directory is named my_project.</li>
+ <li>The main application within the project is named main_project.</li>
+ <li>The project includes two folders within the main_project application: templates and register.</li>
+ <li>
+  The templates folder contains the following files in a subfolder named main:
+ <ul>
+  <li>base.html</li>
+  <li>home.html</li>
+  <li>nav.html</li>
+ </ul>
+ </li>
+ <li>
+  The register folder contains the following files:
+  <ul>
+  <li>login.html</li>
+  <li>sign_up.html</li>
+  <li>user_update.html</li>
+ </ul>
+ </li>
+ 
+ <li>The manage.py file is the entry point for managing the Django project.</li>
+ <li>The README.md file contains information about the project.</li>
+</ul>
+
+
 
 <h1>API Endpoints</h1>
 <ul>
