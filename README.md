@@ -45,10 +45,11 @@ mkdir authflowservapp
 
  </li>
  <li>
-  run the following 
+  Run the following to install django and the dependencies you'll need
 
   ```
   pipenv install django
+pipenv install crispy-bootstrap5
   ```
  </li>
  
@@ -76,21 +77,14 @@ pipenv shell
 python manage.py startapp main
 ```
 </li>
-
-<li>
- run the app
-
- ```
-python manage.py runserver 9000(or you can leave this blank or nominate a different port)
-```
-
-</li>
 </ol>
 
 
-<h3>3</h3>Install the project dependencies:
+<h3>3</h3>Run the app
 
-pipenv install django crispy-bootstrap5
+```
+python manage.py runserver 9000(or you can leave this blank or nominate a different port)
+```
 
 <h3>4</h3>Create a MySQL database using MySQL Workbench.
 Ensure that MySQL Workbench is installed and running on your local machine.
