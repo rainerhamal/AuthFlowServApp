@@ -99,7 +99,31 @@ authflowservapp/
  <li>The README.md file contains information about the project.</li>
 </ul>
 
+<h1>Configuration</h1>
+<h3>I</h3>
+<p>In the authflowservapp/urls.py file, you need to configure the URL patterns for your application. Add the following code to the urlpatterns list:</p>
 
+```
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('main.urls')),
+    path('', include('django.contrib.auth.urls')),
+]
+```
+
+<p>The code above includes URL patterns for the admin site, your main application, and Django's built-in authentication URLs.</p>
+
+<h3>II</h3>
+<p>In the main/urls.py file, add the following code to the urlpatterns list:</p>
+
+```
+urlpatterns = [
+    path('', views.home, name='home'),
+    path('home', views.home, name='home'), #get request to retrieve and display user information 
+    path('sign_up', views.sign_up, name='sign_up'), #get and post request for insert/sign up operation
+    path('<int:id>/', views.user_update, name='user_update'), #get and post request for update operation
+]
+```
 
 <h1>API Endpoints</h1>
 <ul>
