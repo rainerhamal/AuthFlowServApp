@@ -256,7 +256,7 @@ class LoginAPITests(TestCase):
   Open a terminal or command prompt and navigate to the root directory of your Django project.
 
  ```django
-python manage.py test main_project.tests
+python manage.py test
 ```
 This command runs the tests located in the main.tests module.
  </li>
@@ -295,9 +295,6 @@ Review the test results to ensure that all the tests are passing as expected.
     <li>GET /api/users/:id/permissions - Get the list of permissions assigned to a user.</li>
 </ul>
 
-<h1>Unit Tests</h1>
-Unit tests have been written to ensure the functionality of the API services. You can run the tests using the following command:
--python manage.py test
 
 <h1>Usage</h1>
 <ul>
