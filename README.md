@@ -188,6 +188,36 @@ class LoginAPITests(TestCase):
             "password": "wrong_password",
 ```
 
+<ol>
+ <li>Make sure you have your Django project environment set up and dependencies installed.</li>
+ <li>Open a terminal or command prompt and navigate to the root directory of your Django project.</li>
+ <li>
+  Open a terminal or command prompt and navigate to the root directory of your Django project.
+
+ ```django
+python manage.py test main_project.tests
+```
+This command runs the tests located in the main.tests module.
+ </li>
+ 
+ <li>
+  The test runner will execute the test cases and display the test results in the terminal or command prompt. You will see information about the test suite, the number of tests run, and any failures or errors encountered during the tests.
+If all the tests pass successfully, you will see an output similar to the following:
+
+```
+----------------------------------------------------------------------
+Ran x tests in x.xxxs
+
+OK
+```
+
+If any test fails or raises an error, you will see detailed information about the failure or error, including the specific line of code where the failure occurred.
+
+Review the test results to ensure that all the tests are passing as expected.
+</li>
+
+<li>By running the tests, you can verify the behavior and correctness of the /api/signup and /api/login endpoints in your Django project.</li>
+</ol>
 
 <h1>API Endpoints</h1>
 <ul>
